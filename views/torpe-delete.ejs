@@ -1,0 +1,16 @@
+<%- include('header') %>
+<%- include('message') %>
+<h3>törpe törlése</h3>
+<p>Biztosan törlöd a kiválasztott törpét?</p>
+  <form action="/delete/<%=id%>" method="POST">
+    
+    <span>
+        <a href="/" class="btn btn-secondary">Vissza</a>
+        <input type="submit" value="Delete" name="" class="btn btn-danger">
+    </span>
+    
+      
+     
+  </form>
+ 
+<%- include('footer') %>

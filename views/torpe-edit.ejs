@@ -1,0 +1,36 @@
+<%- include('header') %>
+<%- include('message') %>
+<h3>Törpe módosítás</h3>
+  <form action="/edit/<%=id%>" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nev" name="nev" value="<%= data.nev %>"  placeholder="">
+        <label for="nev">Név</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="klan" name="klan" value="<%= data.klan %>" placeholder="">
+        <label for="klan">Klán</label>
+    </div>
+    <select class="form-select mb-3" aria-label="Default select example"  name="nem">
+        <option selected>Open this select menu</option>
+        <option value="F" <% if (data.nem =="F"){%> selected<%} %>>Férfi</option>
+        <option value="N"  <% if (data.nem =="N"){%> selected<%} %>>Nő</option>
+      </select>
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="suly" value="<%= data.suly %>" name="suly" placeholder="">
+        <label for="suly">Súly</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="magassag"  value="<%= data.magassag %>"name="magassag" placeholder="">
+        <label for="magassag">Magasság</label>
+    </div>
+    <span>
+        <a href="/" class="btn btn-secondary">Vissza</a>
+        <input type="submit" value="Felvesz" name="Updatebutton" class="btn btn-primary">
+        
+    </span>
+    
+      
+     
+  </form>
+ 
+<%- include('footer') %>
