@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <title>Törpék</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Törpék</h1>
+        </header>
+        <main>
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Név</th>
+                        
+                        <th>Klan</th>
+                        <th>Nem</th>
+                        <th class="text-end">Súly (kg)</th>
+                        <th class="text-end">Magasság (cm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% results.forEach((item,index) =>{ %>
+                        <tr>
+                            <td><%=(index+1)  %></td>
+                            <td><%=item.nev%> </td>
+                            <td><%=item.klan%></td>
+                            <td><%=item.nem%></td>
+                            <td class="text-end"><%=item.suly%> Kg</td>
+                            <td class="text-end"><%=item.magassag%> Cm</td>
+                        </tr>
+
+                   <% })%>
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="text-center" colspan="6">Összesen <span><%=results.length  %></span> törpe</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+        <footer>
+            <p>Bajai SZC Türr István Technikum - 13,a szoftverfejlesztő</p>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>
