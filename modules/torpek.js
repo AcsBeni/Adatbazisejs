@@ -5,6 +5,13 @@ const db = require('./db');
 const session = require('express-session');
 const pool = require('./db');
 
+/*
+DBHOST = localhost
+DBUSER = root
+DBPASS = 
+DBNAME = torpetarna
+PORT = 3000
+SESSION_SECRET= titkosmikkentyű */
 
 
 //Törpe lista
